@@ -1,5 +1,3 @@
-## Android SDK
-
 Coinbase Android SDK developed in collaboration with [Bitmonet Open-source project](http://www.bitmonet.com) is the first SDK that allows any Android developer to monetize their Android app with Bitcoins. 
 
 ### Features
