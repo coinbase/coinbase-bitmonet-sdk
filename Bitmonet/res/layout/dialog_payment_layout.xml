@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/dialog_outer_margin"
+        android:layout_marginTop="@dimen/dialog_outer_margin"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/dialog_main_text" />
+
+    <TextView
+        android:id="@+id/wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item"
+        android:layout_below="@+id/item"
+        android:layout_marginTop="5dp"
+        android:text="@string/coinbase"
+        android:textColor="@color/DarkGray"
+        android:textSize="@dimen/dialog_sub_text" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/item"
+        android:layout_marginRight="@dimen/dialog_outer_margin"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/dialog_main_text" />
+
+    <Button
+        android:id="@+id/buyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/wallet"
+        android:layout_marginRight="@dimen/dialog_outer_margin"
+        android:layout_marginTop="30dp"
+        android:text="@string/buy"
+        style="@style/DialogButtonStyle" />
+
+    <TextView
+        android:id="@+id/powered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="145dp"
+        android:paddingBottom="@dimen/dialog_outer_margin"
+        android:text="@string/bitmonet"
+        android:textColor="@color/DarkGray"
+        android:textSize="@dimen/dialog_footer_text" />
+
+    <ProgressBar
+        android:id="@+id/transactionProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/processingTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/transactionProgressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/processing_transaction"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/dialog_main_text"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/transactionResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/price"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/dialog_main_text"
+        android:textColor="@color/Black"
+        android:visibility="gone" />
+
+</RelativeLayout>
