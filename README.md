@@ -25,23 +25,17 @@ Coinbase Android SDK developed in collaboration with [Bitmonet Open-source proje
 
 ### API's 
 
-* Initializing the SDK: `initialize(Context context, String clientId, String clientSecret, String callbackUrl)`
+* Initiale the SDK: `initialize(Context context, String clientId, String clientSecret, String callbackUrl)`
 
 * Set the receiving address: `setReceivingAddress(String receivingAddress)`
 
 * Set the transaction currency: `setTransactionCurrency(String transactionCurrency)`
 
-* Request Authorization to access the wallet: `requestWalletAuthorization(Context activityContext)`. 
+* Request Authorization to access the wallet: `requestWalletAuthorization(Context activityContext)`. Implement the `BitmonetOAuthStatusListener` interface to get the status of this call, and use the context of the calling activity as a parameter to this call.
 
-Implement the `BitmonetOAuthStatusListener` interface to get the status of this call, and use the context of the calling activity as a parameter to this call.
+* Transfer money from the user account to the specified receiving address: `sendMoney(Context activityContext, String itemName, double amount)`. Implement the `BitmonetPaymentStatusListener`interface to get the status of this call, and use the context of the calling activity as a parameter to this call.
 
-* Transfer money from the user account to the specified receiving address: `sendMoney(Context activityContext, String itemName, double amount)`. 
-
-Implement the `BitmonetPaymentStatusListener`interface to get the status of this call, and use the context of the calling activity as a parameter to this call.
-
-* Transfer money from the user account to the specified receiving address without showing the modal: `sendMoneyInBackground(Context activityContext, String itemName, double amount)`. 
-
-Implement the `BitmonetPaymentStatusListener` interface to get the status of this call, and use the context of the calling activity as a parameter to this call.
+* Transfer money from the user account to the specified receiving address without showing the modal: `sendMoneyInBackground(Context activityContext, String itemName, double amount)`. Implement the `BitmonetPaymentStatusListener` interface to get the status of this call, and use the context of the calling activity as a parameter to this call.
 
 
 ### Sample Application
