@@ -1,4 +1,4 @@
-Coinbase Android SDK developed in collaboration with [Bitmonet Open-source project](http://www.bitmonet.com) is the first and the only SDK that allows any Android developer to monetize their Android app with Bitcoins.
+Coinbase Android SDK developed in collaboration with [Bitmonet Open-source project](http://www.bitmonet.com) is the first SDK that allows any Android developer to monetize their Android app with Bitcoins.
 
 ## Features
  1. Monetize virtually anything with Bitcoins
@@ -12,6 +12,12 @@ Coinbase Android SDK developed in collaboration with [Bitmonet Open-source proje
  2. `git clone git@github.com:coinbase/coinbase-android-sdk.git`
  3.	Import the code into your Android Workspace: File > Import... > Android > Existing Code into Android Workspace
  4.	Add the bitmonet project as a library project to the App that you wish to monetize: Properties > Android > Library > Add
+ 5. Add the following two lines of code in your manifest file
+
+```xml
+<activity android:name="com.bitmonet.coinbase.CoinbaseWebView"
+	android:theme="@android:style/Theme.NoTitleBar" />
+```
 
 ## Usage
 
