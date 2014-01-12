@@ -39,7 +39,7 @@ public class MainActivity extends Activity implements BitmonetPaymentStatusListe
 		setContentView(R.layout.oauth_launcher);
 
 		// Initialize the Bitmonet SDK
-		Bitmonet.initialize(getApplicationContext(), "YOUR CLIENT ID", "YOUR CLINET SECRET", "YOUR CALLBACK URL"); 
+		Bitmonet.initialize(getApplicationContext(), "YOUR CLIENT ID", "YOUR CLIENT SECRET", "YOUR CALLBACK URL"); 
 
 		// Set the address where you want to receive your Bitcoins
 		Bitmonet.setReceivingAddress("YOUR RECEIVING ADDRESS");
