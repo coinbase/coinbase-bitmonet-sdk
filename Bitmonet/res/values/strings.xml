@@ -3,7 +3,7 @@
 
     <string name="app_name">bitmonet</string>
     <string name="action_settings">Settings</string>
-    <string name="bitmonet">Bitmonet Open-source Project</string>
+    <string name="bitmonet">Powered by Coinbase</string>
     <string name="buy">Buy</string>
     <string name="coinbase">Coinbase</string>
     <string name="loading">Loading&#8230;</string>
