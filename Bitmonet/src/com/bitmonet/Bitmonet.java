@@ -130,7 +130,7 @@ public class Bitmonet {
 	 * 
 	 * @param context Context of the activity from where this method is called.
 	 */
-	public static void requesWalletAuthorization(Context activityContext) {
+	public static void requestWalletAuthorization(Context activityContext) {
 		CoinbasePaymentProcessor.getInstance().startCoinbaseOAuthProcess(activityContext);
 	}
 
