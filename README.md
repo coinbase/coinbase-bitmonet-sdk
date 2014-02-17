@@ -52,7 +52,7 @@ public class MainActivity extends Activity implements BitmonetPaymentStatusListe
 			@Override
 			public void onClick(View v) {
 				// Request Wallet Authorization
-				Bitmonet.requesWalletAuthorization(MainActivity.this);
+				Bitmonet.requestWalletAuthorization(MainActivity.this);
 			}
 		});
 
