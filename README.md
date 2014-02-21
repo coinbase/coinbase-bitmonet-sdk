@@ -125,9 +125,9 @@ public class MainActivity extends Activity implements BitmonetPaymentStatusListe
 	 * @param clientSecret ClientSecret obtained from Coinbase
 	 * 
 	 * @param callbackUrl Callback URL registered at Coinbase. Please ensure
-	 * that the scheme used for the URL is unique to your application. E.g. The
-	 * test aplication used the bitmonet://bitmonet. This is required to
-	 * succesfully redirect the user back to the app during the OAuth2 process
+	 * that the scheme used for the URL is unique to your application. The
+	 * test application uses bitmonet://bitmonet. This is required to
+	 * successfully redirect the user back to the app during the OAuth2 process
 	 */
 	public static void initialize(Context activtityContenxt, String clientId, String clientSecret, String callbackUrl)
 ```
