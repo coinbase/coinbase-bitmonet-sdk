@@ -49,7 +49,7 @@ public class CoinbaseWebView extends Activity {
 		@Override
 		public void onPageStarted(WebView view, String url, Bitmap favicon) {
 			super.onPageStarted(view, url, favicon);
-			if (url.contains(Bitmonet.getCallbackUrl() && Constants.COINBASE_AUTH_RESPONSE_URL_SUFFIX)) {
+			if (url.contains(Bitmonet.getCallbackUrl()) && url.contains(Constants.COINBASE_AUTH_RESPONSE_URL_SUFFIX)) {
 				Context context = CoinbasePaymentProcessor.getInstance().getCallingActivityContext();
 				OAuthHelperUtils.getInstance().requestAccesTokenFromCoinbase(context, getCode(url));
 				CoinbaseWebView.this.finish();
