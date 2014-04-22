@@ -116,15 +116,17 @@ public class CoinbasePaymentProcessor implements TransferMoneyListener {
 			@Override
 			public void run() {
 				if (status) {
-					processSucessfulTransaction(context, hash);
 					if(sDialog != null) {
 						sDialog.updateDialogLayoutForSuccesfulTransaction();
+						showDialogAndDismiss(1500);
 					}
+					processSucessfulTransaction(context, hash);
 				} else {
-					processUnsucessfulTransaction(context, errors);
 					if (sDialog != null) {
 						sDialog.updateDialogLayoutForUnsuccesfulTransaction();
+						showDialogAndDismiss(1500);
 					}
+					processUnsucessfulTransaction(context, errors);
 				}
 				status = false;
 				hash = null;
@@ -205,16 +207,6 @@ public class CoinbasePaymentProcessor implements TransferMoneyListener {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-
-				if (sDialog != null) {
-					try {
-						Thread.sleep(1500);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-					sDialog.dismiss();
-					sDialog = null;
-				}
 			}
 		}).start();
 	}
@@ -223,6 +215,16 @@ public class CoinbasePaymentProcessor implements TransferMoneyListener {
 		sDialog = new PaymentDialog(context, item, amount);
 		sDialog.setTransferMoneyListener(sInstance);
 		sDialog.show();
+	}
+
+	private void showDialogAndDismiss(long time){
+		try {
+			Thread.sleep(time);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		sDialog.dismiss();
+		sDialog = null;
 	}
 
 	public void sendMoneyInBackground(Context context, String item, double amount) {
