@@ -8,7 +8,7 @@ public class Constants {
 	public static final String COINBASE_REQUEST_TOKEN_URL = "https://coinbase.com/oauth/token?grant_type=authorization_code&code=";
 	public static final String COINBASE_SEND_MONEY_URI = "https://coinbase.com/api/v1/transactions/";
 	public static final String COINBASE_REFRESH_TOKEN_URL = "https://coinbase.com/oauth/token?grant_type=refresh_token&refresh_token=";
-	public static final String COINBASE_AUTH_RESPONSE_URL_SUFFIX = "?code=";
+	public static final String COINBASE_AUTH_RESPONSE_URL_SUFFIX = "/authorize/";
 
 	/*
 	 * Coinbase JSON paramneters
