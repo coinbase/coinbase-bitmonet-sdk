@@ -65,7 +65,7 @@ public class CoinbaseWebView extends Activity {
 		}
 
 		private String getCode(String url) {
-			return url.substring((Bitmonet.getCallbackUrl() + "/" + Constants.COINBASE_AUTH_RESPONSE_URL_SUFFIX).length());
+			return url.substring(url.indexOf(Constants.COINBASE_AUTH_RESPONSE_URL_SUFFIX) + Constants.COINBASE_AUTH_RESPONSE_URL_SUFFIX.length());
 		}
 	}
 
